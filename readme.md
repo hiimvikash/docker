@@ -201,11 +201,13 @@ Without proper networking, these containers cannot talk to each other! 🚧
 - YES, `docker exec container_two ping 172.17.0.2` will work.
 - MACHINE IN THE SAME NETWORK CAN COMMUNICATE WITH EACH OTHER PRIVATELY, THEY DON'T NEED TO EXPOSE.
 
-- **EXAMPLE :- nodejs container running @ port 8000 and it is exposed & mapped with host machine.**
+
+#### EXAMPLE :-
+- nodejs container running @ port 8000 and it is exposed & mapped with host machine.
 - but the containers like postgress and redis services can run on same network so that nodejs container can connect with it privately, without exposing the ports to host machine.
 - **When you start Docker, a default bridge network (also called bridge) is created automatically, and newly-started containers connect to it unless otherwise specified.**
-- You can also create user-defined custom bridge networks. User-defined bridge networks are superior to the default bridge network.
-  ![image](https://github.com/user-attachments/assets/3b152979-af48-400f-bf35-299c5c963d80)
+![image](https://github.com/user-attachments/assets/3b152979-af48-400f-bf35-299c5c963d80)
+
 
 
 
@@ -279,7 +281,8 @@ When running multiple containers that need to talk to each other, like a backend
 👉 Now, backend can connect to db using its name instead of an IP!
 
 ### 🎯 Goal - Creating a custom network.
-![image](https://github.com/user-attachments/assets/013a89ba-5533-4cf1-b16c-a583c4f29013)
+![image](https://github.com/user-attachments/assets/70a3acba-ae2e-424b-ac97-688efc1e8d60)
+
 
 Here you will see we can ping other container using their names : this is called DNS resolution in User defined network.👀
 ![image](https://github.com/user-attachments/assets/d190b0b4-f80f-48fd-af23-c454b84348ff)
