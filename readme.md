@@ -513,5 +513,13 @@ The answer based on our current knowledge is NO, because running a container mea
 - `docker run -it --rm -v /Users/piyushgarg/Downloads/shared-folder:/home/ubuntu/piyush ubuntu`
   ![image](https://github.com/user-attachments/assets/6dd5871a-d513-4c94-908e-e09b2841c22d)
 
+#### Way 2 : Volume by Docker 
+- Here we create a actual VOLUME using docker and give it a name.
+- any container can come and use this VOLUME to store their files.
+- `docker volume create custom_data`
+- `docker run -it --rm -v custom_data:/server ubuntu`
+- make files 
+- `docker run -it --rm -v custom_data:/server busybox` : Here you will be able to acces same files by attaching default volumes.
+
 
 
