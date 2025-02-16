@@ -281,6 +281,9 @@ When running multiple containers that need to talk to each other, like a backend
 ### 🎯 Goal - Creating a custom network.
 ![image](https://github.com/user-attachments/assets/013a89ba-5533-4cf1-b16c-a583c4f29013)
 
+Here you will see we can ping other container using their names : this is called DNS resolution in User defined network.👀
+![image](https://github.com/user-attachments/assets/d190b0b4-f80f-48fd-af23-c454b84348ff)
+
 
 - ✅ Create a custom Docker network
 - ✅ Run a PostgreSQL database container
@@ -340,6 +343,7 @@ To test if the backend can reach the database, exec into the backend container a
 
 
 If everything is set up correctly, you'll see successful ping responses. 🚀
+
 
 🌟 Recap
 
