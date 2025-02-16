@@ -496,3 +496,20 @@ If backend is in a different network:
 
 If you're running multiple services, always use a user-defined bridge for better networking.The default bridge is only good for quick, simple container setups.With Docker Compose, user-defined networks are automatically managed, making life even easier.
 
+
+## 7. Docker Volume 
+
+### Run a ubuntu container, create files and directory using interactive terminal.
+- Now will you be able to persist those file if you re-run the container ?
+- Can you access particular directory of your HOST machine from the container ?
+
+The answer based on our current knowledge is NO, because running a container means running a small machine in full isolation which will have it's own file system.
+
+### The concept of Docker Volume helps container to use HOST machine HardDisk.
+
+#### Way 1 : Volume mounting.
+- Here we mount (link) **particular directory of HOST** to **particular directory of container** while running container.
+- so any file change from anyone(HOST or CONTAINER) will be visible by both..basically we have single source of truth.
+- `docker run -it --rm -v /Users/piyushgarg/Downloads/shared-folder:/home/ubuntu/piyush ubuntu` 
+
+
