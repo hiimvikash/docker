@@ -190,6 +190,8 @@ When we run applications in Docker containers, they need to communicate with eac
 Without proper networking, these containers cannot talk to each other! 🚧
 
 ### Some Experiments :
+![image](https://github.com/user-attachments/assets/908eddc5-084e-4270-a94e-a0d78134e6c7)
+
 - `docker run -itd --name=container_one --rm busybox`
 - Run a container (assign a name) in detached mode.
 - `docker network ls` : Here you will see all the docker network provided by docker engine.
