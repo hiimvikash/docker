@@ -522,4 +522,39 @@ The answer based on our current knowledge is NO, because running a container mea
 - `docker run -it --rm -v custom_data:/server busybox` : Here you will be able to acces same files by attaching default volumes.
 
 
+## 8. Docker compose 
+- Docker Compose is a tool that helps you define and run multi-container Docker applications using a single YAML file (docker-compose.yml).
+- Instead of running multiple docker run commands for different containers, Docker Compose allows you to define everything in one place and start everything with a single command.
+- Here you specify specific version of services.
+- All the services are running on closed custom network.
+- `docker compose up -d`
+- `npm run build && npm run start`
+![image](https://github.com/user-attachments/assets/fc0649f1-7621-47bd-b385-799e1e887598)
+
+### Networking in Docker Compose (we don't use much)
+- Here we can create our custom network and assign services to run our user defined network.
+![image](https://github.com/user-attachments/assets/8d0da2b8-e42e-43a8-8cb3-f944c07d859f)
+
+### Volumes in Docker compose
+![image](https://github.com/user-attachments/assets/3320b255-5b13-4379-9e5c-33482a5705b3)
+
+### Custom Docker service : How can I bring my backend in docker compose file ? 
+- Here my backend, db, redis are running in same network and if u remember in our backend file we are accesing (localhost:5432 for postgress and localhost:6379 for redis).
+- So this will result in fail connection because if you are running your backend as container then localhost connection to other services doesn't make sense.
+- Earlier it was localhost because your backend was running on HOST machine and postgress and redis were PORT mapped and EXPOSED to HOST.
+![image](https://github.com/user-attachments/assets/f805e6df-72e5-4ea2-88cf-a35f6610379e)
+![image](https://github.com/user-attachments/assets/a64e09e6-e17d-4b05-af12-0ee7a1b01e07)
+
+#### Solution is just change backend code
+- Here redis is connecting in `redis://redis:6379`
+- postgress `host=db` & `port=5432`
+![image](https://github.com/user-attachments/assets/cc560f86-1137-48ce-ba3c-b399ca092c9e)
+- You can remove PORT MAPPING for redis and db service from docker-compose.yml file and PORT mapping for backend service.
+
+
+
+
+
+
+
 
