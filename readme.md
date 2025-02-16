@@ -510,6 +510,8 @@ The answer based on our current knowledge is NO, because running a container mea
 #### Way 1 : Volume mounting.
 - Here we mount (link) **particular directory of HOST** to **particular directory of container** while running container.
 - so any file change from anyone(HOST or CONTAINER) will be visible by both..basically we have single source of truth.
-- `docker run -it --rm -v /Users/piyushgarg/Downloads/shared-folder:/home/ubuntu/piyush ubuntu` 
+- `docker run -it --rm -v /Users/piyushgarg/Downloads/shared-folder:/home/ubuntu/piyush ubuntu`
+  ![image](https://github.com/user-attachments/assets/6dd5871a-d513-4c94-908e-e09b2841c22d)
+
 
 
