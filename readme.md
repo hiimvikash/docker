@@ -551,6 +551,10 @@ The answer based on our current knowledge is NO, because running a container mea
 ![image](https://github.com/user-attachments/assets/cc560f86-1137-48ce-ba3c-b399ca092c9e)
 - You can remove PORT MAPPING for redis and db service from docker-compose.yml file and add PORT mapping for backend service.
 
+## 9. Docker Orchestration
+### First Principle Approach :-
+![image](https://github.com/user-attachments/assets/2c2f67b1-b7bd-4e54-a3bd-b17311c2e9fa)
+
 
 
 
