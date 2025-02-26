@@ -86,7 +86,7 @@ You can just set `WORKDIR` once and write: `RUN npm install`
 
     - Effect:
 
-    - When you run docker run my-image, it will execute node index.js inside the container.
+    - When you run **`docker run my-image`**, it will execute node index.js inside the container - THIS IS THE LONG RUNNING PROCESS SET IN DOCKER FILE, if `CMD ["node", "index.js"]` is not provided in docker file then it will run immediately and stop, **as it has no long running process.**
     - If you run `docker run my-image bash`, it overrides CMD, and bash runs instead of node index.js.
 4. If you have multiple CMD in your dockerfile, then only last CMD will be executed.
 
