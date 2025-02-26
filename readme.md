@@ -18,7 +18,7 @@
 - `docker run -it --name myContainer ubuntu` : spin a container(if no --name then random name is provided to a container) from ubuntu image as `interactive-terminal`.
 - `docker image inspect ubuntu`
     - every image has it's entry point, default entry point is `/bin/bash` for ubuntu.
-    - `docker run ubuntu` → Runs, finds no command, and exits immediately.
+    - `docker run ubuntu` → Runs, finds no command, and exits immediately, Ubuntu does not have a default long-running process, so it exits immediately after starting.
     - `docker run -it ubuntu` → Runs an interactive shell, so it keeps running.
     - `docker run -it ubuntu ls` → This will run `ls` and exit. 
 
